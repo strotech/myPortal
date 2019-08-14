@@ -1,0 +1,10 @@
+mongod --directoryperdb --dbpath C:\.. --logpath C:\..\x.log --logappend --rest --install
+==============================================
+sudo service mongod start
+sudo service mongod stop
+
+tail -f /var/log/mongodb/mongod.log
+
+mongo
+==============================================
+

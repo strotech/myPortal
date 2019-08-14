@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1 Hi, User!!
+    table(style='width:100%', border='1')
+        tr
+            th Sl No.
+            th Activity
+            th Created Date
+            th Start Date
+            th End Date
+            th Status
+            th Remarks
+            th Assignee
+
+        each activity,i in activities
+            tr
+                td= activity.slNo
+                td= activity.activity
+                td= activity.createdDate
+                td= activity.startDate
+                td= activity.endDate
+                td= activity.status
+                td= activity.remarks
+                td= activity.assignee
+            
