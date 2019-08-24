@@ -3,8 +3,11 @@ mongod --dbpath /home/sijils/Desktop/myPortal/data
 mongo
 
 use teamDB
+
+db.team_activities.remove({})
+
 db.team_activities.insert({
-  slNo: "1",
+  slNo: 1,
   activity: "Create domain",
   createdDate: "01-01-2019",
   startDate: "02-02-2019",

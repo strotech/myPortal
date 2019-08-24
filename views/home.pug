@@ -2,3 +2,13 @@ extends layout
 
 block content
     h1 Hello!! Welcome to #{project} portal
+
+    h2 Login
+    form(method='POST',action='/')
+        #form-group
+            label Username
+            input.form-control(name='username',type='text')
+        #form-group
+            label Password
+            input.form-control(name='password',type='password')
+        input.btn.btn-primary(type='submit',value='Login')

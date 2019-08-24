@@ -1,11 +1,8 @@
 let mongoose=require('mongoose');
+const configDB=require('../appConfig/appDatabase')
 
 //Activities Schema
 let activitiesSchema=mongoose.Schema({
-    slNo:{
-        type: String,
-        required: true
-    },
     activity:{
         type: String,
         required: true
@@ -28,12 +25,12 @@ let activitiesSchema=mongoose.Schema({
     },
     remarks:{
         type: String,
-        required: true
+        required: false
     },
     assignee:{
         type: String,
         required: true
     }
-}, { collection: 'team_activities' })
+}, { collection: configDB.activitiesColl })
 
 let activities=module.exports=mongoose.model('activitiesModel',activitiesSchema);

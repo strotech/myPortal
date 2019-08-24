@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    h1 Hi, User!!
+    h1 Hi, #{user}!!
     table(style='width:100%', border='1')
         tr
             th Sl No.
@@ -15,12 +15,35 @@ block content
 
         each activity,i in activities
             tr
-                td= activity.slNo
-                td= activity.activity
+                td= i+1
+                td
+                    a(href = '/edit/'+activity._id)= activity.activity 
                 td= activity.createdDate
                 td= activity.startDate
                 td= activity.endDate
                 td= activity.status
                 td= activity.remarks
                 td= activity.assignee
+
+    h2 You can add new activities here
+    form(method='POST',action='/dashboard')
+        #form-group
+            label Activity
+            textarea.form-control(name='activity')
+        #form-group
+            label Start Date
+            input.form-control(name='start_date',type='text')
+        #form-group
+            label End Date
+            input.form-control(name='end_date',type='text')
+        #form-group
+            label Status
+            input.form-control(name='status',type='text')
+        #form-group
+            label Remarks
+            input.form-control(name='remarks',type='text')
+        #form-group
+            label Assignee
+            input.form-control(name='assignee',type='text')
+        input.btn.btn-primary(type='submit',value='Submit')
             

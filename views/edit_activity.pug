@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h5 You can update activity here!!
+    form(method='POST',action='/edit/'+activity._id)
+        #form-group
+            label Description:
+            input.form-control(name='desc',type='text',value=activity.activity)
+        #form-group
+            label Status:
+            input.form-control(name='status',type='text',value=activity.status)
+        br
+        input.btn.btn-primary(type='submit',value='Edit')
+        input.btn.btn-danger.delete-activity(type='submit',value='Delete',data-id=activity._id)
