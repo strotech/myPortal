@@ -8,3 +8,4 @@ tail -f /var/log/mongodb/mongod.log
 mongo
 ==============================================
 npm install -g bower
+bower install bootstrap jquery
