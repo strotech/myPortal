@@ -9,3 +9,6 @@ mongo
 ==============================================
 npm install -g bower
 bower install bootstrap jquery
+
+For converting bootstrap html to jade , use http://html2jade.aaron-powell.com/
+==============================================
