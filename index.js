@@ -10,7 +10,7 @@ const activityRoutes=require('./routes/activity.js')
 const userRoutes=require('./routes/user.js')
 const config=require('./appConfig/appDatabase.js')
 
-mongoose.connect(config.database);
+mongoose.connect(config.database,{"user":config.mongoUser,"pass":config.mongoPass});
 let db=mongoose.connection;
 
 //check for DB errors
