@@ -80,6 +80,6 @@ app.get('/',function(req,res){
 activityRoutes(app);
 userRoutes(app);
 
-app.listen(3001,function(){
+app.listen(process.env.PORT ||3001,function(){
     console.log('Server started on port 3001......')
 })
